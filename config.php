@@ -1,4 +1,5 @@
 <?php
+define('WEB_TITLE', 'ImagesProjet');
 define('WEB_DIR_NAME', 'images_projet');
 define('IMAGES_DIR_NAME', 'images');
 define('IMAGES_DIR_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . WEB_DIR_NAME . '/' . IMAGES_DIR_NAME . '/');
