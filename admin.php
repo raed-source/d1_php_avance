@@ -21,16 +21,17 @@ $imgs = $img->getImage(IMAGES_DIR_PATH);
     <ul>
         <?php foreach ($imgs as $img) : ?>
             <li>
-                <img src="<?php echo IMAGES_DIR_URL . $img ?>" alt="">
+                <img src="<?php echo IMAGES_DIR_URL . $img['filename'] ?>" alt="">
                 <form action="process_image.php" method="POST">
-                    <p>Titre : <input type="text" name="title"> </p>
-                    <input type="hidden" name="filename" value="<?php echo $img ?>">
-                    <p>Description : <textarea name="description" id="" cols="30" rows="10"></textarea></p>
+                    <p>Titre : <input type="text" name="title" value="<?php echo $img['title'] ?>"> </p>
+                    <input type="hidden" name="filename" value="<?php echo $img['filename'] ?>">
+                    <p>Description : <textarea name="description" id="" cols="30" rows="10"><?php echo $img['description'] ?></textarea></p>
                     <p><input type="submit" name="formImageSubmit" value="validez"></p>
                 </form>
             </li>
         <?php endforeach ?>
     </ul>
+
 </body>
 
 </html>

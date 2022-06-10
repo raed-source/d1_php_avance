@@ -10,14 +10,14 @@ class Image
         $i = 0;
         if (is_dir($dir)) {
             if ($handle = opendir($dir)) {
-                while (($entry = readdir($handle)) !== false) {
-                    if ($entry !== '.' && $entry !== '..')
+                while (false !== ($entry = readdir($handle))) {
+                    if ($entry !== '.' && $entry !== '..') {
                         $i++;
-                    $listeImage[$i]['filename'] = $entry;
-
-                    $image_data = $this->getImageData($entry);
-                    $listeImage[$i]['title'] = $image_data['title'];
-                    $listeImage[$i]['description'] = $image_data['description'];
+                        $listeImage[$i]['filename'] = $entry;
+                        $image_data = $this->getImageData($entry);
+                        $listeImage[$i]['title'] = $image_data['title'];
+                        $listeImage[$i]['description'] = $image_data['description'];
+                    }
                 }
             }
         }
