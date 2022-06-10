@@ -1,10 +1,7 @@
 <?php
-require('classes/Image.php');
 require('config.php');
+require('class/Image.php');
 require('content.php');
-echo 'INDEX.PHP';
-$constants = get_defined_constants(true);
-print_r($constants['user']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +10,8 @@ print_r($constants['user']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImagesProjet</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Accuil</title>
 </head>
 
 <body>
@@ -21,4 +19,3 @@ print_r($constants['user']);
 </body>
 
 </html>
-<!-- <img src="http://localhost/images_projet/images/champs-001.jpg" alt=""> -->

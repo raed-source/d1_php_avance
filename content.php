@@ -1,11 +1,8 @@
 <?php
-// require('classes/Image.php');
-// require('config.php');
-$Image = new Image();
-$Images = $Image->getImage(IMAGES_DIR_PATH);
+// -------------------------instanciation de la class Image
+$img = new Image();
+$listeImg = $img->getImage(IMAGES_DIR_PATH);
 ?>
-<ul>
-    <?php foreach ($images as $image) : ?>
-        <li><img src="<?php echo IMAGES_DIR_URL . $image ?>" alt=""></li>
-    <?php endforeach ?>
-</ul>
+<?php foreach ($listeImg as $img) : ?>
+    <li><a href="#"><img src="<?php echo IMAGES_DIR_URL . $img ?>" alt="" </a></li>
+<?php endforeach ?>
